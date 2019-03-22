@@ -9,8 +9,8 @@
 	<link  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link rel="stylesheet" href="index.css">
-	</head>
-
+	
+</head>
 <body>
 	<!-- NAVBAR Start -->
 	<div class="navbar_class">
@@ -151,120 +151,30 @@
 		<h2 class="description1">Call + Chat privately with a verified doctor and get response in 5 minutes!</h2>
 		<div class="btn-box"> <a style="text-decoration:none;" href="chat.php" class="btn-blue">Chat now</a> </div>
 	</div>
-
-	<script type="text/javascript">
+	<script>
 		/* Hover animations*/
 		var v1=document.querySelector("button");
 		v1.addEventListener("mouseover",function(){
-			this.style.backgroundColor="steelblue";
-			this.style.color="white";
+		this.style.backgroundColor="steelblue";
+		this.style.color="white";
 		});
 		v1.addEventListener("mouseout",function(){
-			this.style.backgroundColor="buttonFace";
-			this.style.color="#555";
+		this.style.backgroundColor="buttonFace";
+		this.style.color="#555";
 		});
 
 		lis=document.querySelectorAll("li");
 		for(var i=0;i<lis.length-3;i++){
-			lis[i].addEventListener("mouseover",function(){
-				this.style.backgroundColor="steelblue";
-			});
-			lis[i].addEventListener("mouseout",function(){
-				this.style.backgroundColor="#28328c";
-				this.style.color="#555";
-			});
+		lis[i].addEventListener("mouseover",function(){
+			this.style.backgroundColor="steelblue";
+		});
+		lis[i].addEventListener("mouseout",function(){
+			this.style.backgroundColor="#28328c";
+			this.style.color="#555";
+		});
 		}
 		/* Hover animations end*/
-		/* Validations start*/
-		function lvalidate()
-		{
-			var un = document.getElementById("lusername").value;
-			var pw = document.getElementById("lpassword").value;
-			var sun = "upik98"; 
-			var spw = "12345";
-			if ((un == sun) && (pw == spw)) {
-				alert("Login Success!");           
-				return true;}
-			else {
-				alert ("Login failed :( Please check your username and password!");
-				return false;}
-		}
-		function checkPassword(str)
-		{
-			var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
-			return re.test(str);
-		}
-		function checkForm(form)
-		{
-			re = /^\w+$/;
-			if(!re.test(form.username.value)) {
-				alert("Error: Username must contain only letters, numbers and underscores!");
-				form.username.focus();
-				return false;
-			}
-			re=/^[\w]+@[\w]+(.)com$/;
-			if(!re.test(form.email.value)) {
-				alert("Error: Email must contain only numbers,('@','.')-symbols,letters!");
-				form.email.focus();
-				return false;
-			}
-			re=/^[1-9]{1}[0-9]{9}$/;
-			if(!re.test(form.mobile.value)) {
-				alert("Error: Phone number must contain only numbers!");
-				form.mobile.focus();
-				return false;
-			}
-			if(!checkPassword(form.password.value)) {
-				alert("The password you have entered is not valid!");
-				form.password.focus();
-				return false;
-			}
-			if(form.password.value != form.confirmpassword.value) {
-				alert("Error: Please check that you've entered and confirmed your password!");
-				form.confirmpassword.focus();
-				return false;
-			}
-		return true;
-		}
-		/*Validations end */
-		/*Login/Signup window animations*/
-		$(function () {
-			$('#register-form-link').click(function(e) {
-				$("#register-form").delay(100).fadeIn(100);
-				$("#login-form").fadeOut(100);
-				$('#login-form-link').removeClass('active');
-				$(this).addClass('active');
-				e.preventDefault();
-			});
-			$('#login-form-link').click(function(e) {
-				$("#login-form").delay(100).fadeIn(100);
-				$("#register-form").fadeOut(100);
-				$('#register-form-link').removeClass('active');
-				$(this).addClass('active');
-				e.preventDefault();
-			});
-		});
-
-		$("#window1").click(function(){
-			$('#modal-wrapper').css('display','block');
-			$('#register-form').css('display','block');
-			$('#login-form').css('display','none');
-			$("#login-form-link").removeClass("active");
-			$("#register-form-link").addClass("active");
-		});
-		$("#window2").click(function(){
-			$('#modal-wrapper').css('display','block');
-			$('#register-form').css('display','none');
-			$('#login-form').css('display','block');
-			$("#login-form-link").addClass("active");
-			$("#register-form-link").removeClass("active");
-		});
-		$("#closebtn").click(function(){
-			$('#modal-wrapper').fadeOut(600,function(){
-				$('this').css('display','none');
-			})
-		})
-		/*Login/Signup window animations end*/
 	</script>
+	<script src="index.js"></script>
 </body>
 </html>

@@ -68,3 +68,24 @@ input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none;-moz-app
 }
 #window1{cursor:pointer;} #window2{cursor:pointer;}
 
+/*---------------CATALOG STYLING---------------------*/
+.content{
+    padding:10px 30px;
+    margin:0 auto;
+}
+.items{
+    display:flex;
+    justify-content: space-around;
+    list-style: none;
+    padding:5px;
+}
+.items li img{
+    border: 1px solid #ddd;
+    border-radius: 4px; 
+    padding: 5px; 
+    width: 350px;
+}
+.city{
+    font-size:40px;
+    padding-left:none;
+}
