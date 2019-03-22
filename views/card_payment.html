@@ -108,7 +108,7 @@
   <div class="row">
     <div class="col-75">
       <div class="container">
-        <form action="#">
+        <form action="hospitals/hyd/1.html" onsubmit="return payDet()">
           
           <div class="row">
 
@@ -158,6 +158,67 @@
     </div>
   </div>
 </div>
-
+<script type="text/javascript">
+function payDet()
+{
+	var cnam=new String(document.getElementById("cname").value);
+	var cnum=new String(document.getElementById("ccnum").value);
+	var cvv=new String(document.getElementById("cvv").value);
+	var exppattern=/[0-9]{4}/;
+	var namepattern=/[a-z|A-Z]/g;
+	var exp=new String("");
+  
+	var numpattern=/[0-9]{16}/;
+	
+	var cvvpattern=/[0-9]{3}/;
+	
+	if(cnam=="")
+	{
+    alert("Enter Name on card");
+    return false;		
+	}
+	else if(cnum=="")
+	{
+		alert("Enter cardnumber");
+		return false;
+	}
+	else if(cvv=="")
+	{
+		alert("Enter cvv");
+		return false;
+	}
+	else if(exp=="a")
+	{
+		alert("Enter expiry date");
+		return false;
+	}
+	else if(!(cnam.match(namepattern))){
+    alert("Enter valid Name");
+    return false;
+	}
+	
+	else if(!(cnum.match(numpattern)))
+	{
+		alert("Enter valid cardnumber");
+		return false;
+	}
+	else if(!(exp.match(exppattern)))
+	{
+		alert("Enter valid expiry date");
+		return false;
+	}
+	else if(!(cvv.match(cvvpattern)))
+	{
+		alert("Enter valid cvv");
+		return false;
+	}
+	else
+	{
+		document.write("<html><h3>Successfully Registered!!!</h3><table align=center><tr><td><a href=bookstore.html>Go To Homepage</a></td></tr><tr><td><a href=log.html>Login</a></td></tr></table></html>");
+		return false;
+  }
+  return true;
+}
+</script>
 </body>
 </html>

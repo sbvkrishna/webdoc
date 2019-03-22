@@ -8,7 +8,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="public/assets/css/index.css">
 	
 </head>
 <body>
@@ -28,8 +28,8 @@
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 
-					<li><a href="book_appointment.html"><i class="fas fa-first-aid"></i> Book Appointment</a></li>
-					<li><a href="private_chat.html"><i class="fas fa-laptop-medical"></i> Private chat</a></li>
+					<li><a href="views/card_payment.html"><i class="fas fa-first-aid"></i> Book Appointment</a></li>
+					<li><a href="views/card_payment.html"><i class="fas fa-laptop-medical"></i> Private chat</a></li>
 					<li class="dropdown collapse navbar-collapse"><a class="dropdown-toggle" data-toggle="dropdown" href="#" data-hover="dropdown" data-animations="fadeInDown 
 						fadeInRight fadeInUp fadeInLeft"><span class="caret"></span></a>
 						<ul class="dropdown-menu">
@@ -65,7 +65,7 @@
 						<div class="row">
 							<div class="col-lg-12">
 								
-								<form class="userform" id="register-form" onsubmit="return checkForm(this);" action="start.html" method="post" role="form">
+								<form class="userform" id="register-form" onsubmit="return checkForm(this);" action="views/start.html" method="post" role="form">
 									<div class="form-group">
 										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="" required>
 									</div>
@@ -89,7 +89,7 @@
 										</div>
 									</div>
 								</form>
-								<form id="login-form" class="userform"onSubmit="return lvalidate()"action="start.html" method="post" role="form" >
+								<form id="login-form" class="userform"onSubmit="return lvalidate()" action="views/start.html" method="post" role="form" >
 									<div class="form-group">
 										<input type="text" name="lusername" id="lusername" tabindex="1" class="form-control" placeholder="Username" value="">
 									</div>
@@ -139,7 +139,7 @@
 					<option>Clinics</option>
 				</select>
 				<input type="text" placeholder="Search Hospitals,Landmarks,Doctors,...." style="border-radius:0px;outline:none;"/>
-				<button type="button" style="">SEARCH</button>
+				<button type="button" onclick="location.href ='catalog.html';">SEARCH</button>
 			</div>
 		</form>
 	</div>
@@ -149,7 +149,7 @@
 		<section id="first-fold" class="first-fold" style="background-image:url(https://www.practo.com/consult/bundles/cwipage/images/consult-from-anywhere-v1.svg)">
 		<h1 class="heading"><i class="fas fa-heartbeat"></i> Talk to a doctor from anywhere!</h1>
 		<h2 class="description1">Call + Chat privately with a verified doctor and get response in 5 minutes!</h2>
-		<div class="btn-box"> <a style="text-decoration:none;" href="chat.php" class="btn-blue">Chat now</a> </div>
+		<div class="btn-box"> <a style="text-decoration:none;" href="views/card_payment.html" class="btn-blue">Chat now</a> </div>
 	</div>
 	<script>
 		/* Hover animations*/
@@ -162,19 +162,8 @@
 		this.style.backgroundColor="buttonFace";
 		this.style.color="#555";
 		});
-
-		lis=document.querySelectorAll("li");
-		for(var i=0;i<lis.length-3;i++){
-		lis[i].addEventListener("mouseover",function(){
-			this.style.backgroundColor="steelblue";
-		});
-		lis[i].addEventListener("mouseout",function(){
-			this.style.backgroundColor="#28328c";
-			this.style.color="#555";
-		});
-		}
 		/* Hover animations end*/
 	</script>
-	<script src="index.js"></script>
+	<script src="public/assets/js/index.js"></script>
 </body>
 </html>

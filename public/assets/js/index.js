@@ -1,4 +1,15 @@
-
+/* Hover animations Navbar */
+lis=document.querySelectorAll("nav li");
+for(var i=0;i<lis.length-3;i++){
+lis[i].addEventListener("mouseover",function(){
+    this.style.backgroundColor="steelblue";
+});
+lis[i].addEventListener("mouseout",function(){
+    this.style.backgroundColor="#28328c";
+    this.style.color="#555";
+});
+}
+/* Hover animations Navbar end*/
 
 /*Login/Signup window animations*/
 $(function () {
@@ -17,7 +28,6 @@ $(function () {
         e.preventDefault();
     });
 });
-
 $("#window1").click(function(){
     $('#modal-wrapper').css('display','block');
     $('#register-form').css('display','block');
@@ -44,13 +54,13 @@ function lvalidate()
 {
     var un = document.getElementById("lusername").value;
     var pw = document.getElementById("lpassword").value;
-    var sun = "upik98"; 
+    var sun = "user"; 
     var spw = "12345";
     if ((un == sun) && (pw == spw)) {
         alert("Login Success!");           
         return true;}
     else {
-        alert ("Login failed :( Please check your username and password!");
+        alert ("Login failed.Please check your username and password!");
         return false;}
 }
 function checkPassword(str)
@@ -91,3 +101,4 @@ function checkForm(form)
 return true;
 }
 /*Validations end */
+
