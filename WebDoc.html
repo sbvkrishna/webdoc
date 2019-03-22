@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>WebDoc</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+	<style>
+		.sbox{align-items: center;padding-top:50px;padding-bottom:70px;}
+		.sbox form .child{border-radius: 8px;background:#28328c;padding: 16px;display: flex; width: auto;margin-left:5%;margin-right:5%;font-size: 20px;color: #555;font-weight: 400;font-family: 'Poppins', sans-serif;}
+		.sbox form .child input{height: 40px;background: #fff;border-radius: 4px;border: 0;display: block;width: 50%;padding: 6px 15px 6px 15px;text-align: center;}
+		.dropdown-menu{
+			background-color: white;
+			padding:0;
+		}
+		.dropdown-toggle[aria-expanded="true"] {
+			background: steelblue !important;
+			color: #28328c !important;
+		}
+		.dropdown-menu li a:hover
+		{
+			color:white;
+			background-color:steelblue;
+			border-color: none;
+		}
+		.navbar-brand{color:white;font-size:30px;position:relative;top:-5px;}
+		.container{text-align:center;font-size:40px;font-weight:bold;color:#2d2d32;}
+		.container-fluid{margin-right:auto;margin-left:auto;background-color:#28328c;}
+		.first-fold{background-color:#28328c;height:540px;color:white;padding-top:50px;background-repeat:no-repeat;background-position:100%;border-radius:8px;}
+		.heading{margin-left:146.5px;padding-top:50px;font-size:40px;color:white;margin-bottom:15px;font-weight:bold}
+		.description1{margin-left:150px;margin-bottom:31px;font-size:24px;line-height:1.38;color:#f0f0f5;max-width:380px;font-weight:normal}
+		.btn-blue{display:inline-block;color:#ffffff;background:#18bef0;border-radius:4px;font-size:26px;font-weight:700;padding:0 33px;line-height:66px;}
+		.btn-box{text-align:left;margin-left:230px}
+		h1{text-align:center; font-size: 200%;font-weight: 700;color:#133a7a}
+		body{background: linear-gradient(to right, #ada996, #f2f2f2, #dbdbdb, #eaeaea);}
+		#search{border-top-right-radius:0px;border-bottom-right-radius:0px;outline:none;}
+		li{
+			transition: all 0.3s;font-size: 18px;font-weight: 400;
+		}
+		button{
+			transition: all 0.3s;font-weight: 500;letter-spacing: 3px;border:1px solid buttonFace;border-top-right-radius:4px;border-bottom-right-radius:4px;outline:none;
+		}
+		.panel-login { border-color: #ccc; -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2); -moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2); box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2); } .panel-login>.panel-heading { color: #00415d; background-color: #fff; border-color: #fff; text-align:center; } .panel-login>.panel-heading a{ text-decoration: none; color: #666; font-weight: bold; font-size: 15px; -webkit-transition: all 0.1s linear; -moz-transition: all 0.1s linear; transition: all 0.1s linear; } .panel-login>.panel-heading a.active{ color: #029f5b; font-size: 18px; } .panel-login>.panel-heading hr{ margin-top: 10px; margin-bottom: 0px; clear: both; border: 0; height: 1px; background-image: -webkit-linear-gradient(left,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.15),rgba(0, 0, 0, 0)); background-image: -moz-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0)); background-image: -ms-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0)); background-image: -o-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0)); } .panel-login input[type="text"],.panel-login input[type="number"],.panel-login input[type="email"],.panel-login input[type="password"] { height: 45px; border: 1px solid #ddd; font-size: 16px; -webkit-transition: all 0.1s linear; -moz-transition: all 0.1s linear; transition: all 0.1s linear; } .panel-login input:hover, .panel-login input:focus { outline:none; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; border-color: #ccc; } .btn-login { background-color: #59B2E0; outline: none; color: #fff; font-size: 14px; height: auto; font-weight: normal; padding: 14px 0; text-transform: uppercase; border-color: #59B2E6; } .btn-login:hover, .btn-login:focus { color: #fff; background-color: #53A3CD; border-color: #53A3CD; } .forgot-password { text-decoration: underline; color: #888; } .forgot-password:hover, .forgot-password:focus { text-decoration: underline; color: #666; } .btn-register { background-color: #1CB94E; outline: none; color: #fff; font-size: 14px; height: auto; font-weight: normal; padding: 14px 0; text-transform: uppercase; border-color: #1CB94A; } .btn-register:hover, .btn-register:focus { color: #fff; background-color: #1CA347; border-color: #1CA347; } 
+		input[type=number]::-webkit-inner-spin-button, 
+		input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none;-moz-appearance: none;appearance: none;margin: 0; }
+		.animate {
+			animation: zoom 0.6s
+		}
+		@keyframes zoom {
+			from {transform: scale(0)} 
+			to {transform: scale(1)}
+		}
+		.close {
+			position: absolute;
+			right: 25px;
+			top: 0;
+			color: #000;
+			font-size: 40px;
+			font-weight: bold;
+		}
+		.close:hover,.close:focus {
+			color: red;
+			cursor: pointer;
+		}
+		#modal-wrapper {
+			display:none;
+			position: fixed;
+			z-index: 1;
+			padding-top: 100px;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			background-color: rgba(0,0,0,0.4);
+		}
+		#window1{cursor:pointer;} #window2{cursor:pointer;}
+
+	</style>
+	</head>
+
+<body>
+	<!-- NAVBAR Start -->
+	<div class="navbar_class">
+		<nav class="navbar navbar-inverse navbar-fixed">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand " href="#"><i class="fas fa-clinic-medical"></i> WebDoc</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li><a href="#" >Home</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li id="window1"><a><span class="glyphicon glyphicon-user "></span> Sign Up</a></li>
+					<li id="window2"><a><span class="glyphicon glyphicon-log-in" ></span> Login</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+
+					<li><a href="book_appointment.html"><i class="fas fa-first-aid"></i> Book Appointment</a></li>
+					<li><a href="private_chat.html"><i class="fas fa-laptop-medical"></i> Private chat</a></li>
+					<li class="dropdown collapse navbar-collapse"><a class="dropdown-toggle" data-toggle="dropdown" href="#" data-hover="dropdown" data-animations="fadeInDown 
+						fadeInRight fadeInUp fadeInLeft"><span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">About us</a></li>
+							<li><a href="#">Help</a></li>
+							<li><a href="#">Ref</a></li>
+						</ul>
+					</li>
+
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<!-- NAVBAR End-->
+	<!--Login/Register Window-->
+	<div class="container1" id="modal-wrapper">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3 animate" >
+				<div class="panel panel-login">
+					<div class="panel-heading" >
+						<div class="row">
+							<div class="col-xs-6">
+								<a href="#login-form" id="login-form-link">Login</a>
+							</div>
+							<div class="col-xs-6">
+								<a href="#register-form" id="register-form-link">Register</a>
+							</div>
+							<span id="closebtn" class="close " title="Close">&times;</span>
+						</div>
+						<hr>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-lg-12">
+								
+								<form class="userform" id="register-form" onsubmit="return checkForm(this);" action="start.html" method="post" role="form">
+									<div class="form-group">
+										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="" required>
+									</div>
+									<div class="form-group">
+										<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" pattern="[\w]+@[\w]+(.)com"value="" required>
+									</div>
+									<div class="form-group">
+										<input name="mobile" id="mobile" tabindex="1" class="form-control" placeholder="Phone Number" pattern="[1-9]{1}[0-9]{9}" type = "number" value="" required>
+									</div>
+									<div class="form-group">
+										<input type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required tabindex="2" class="form-control" placeholder="Password" onchange="register-form.confirm-password.pattern = RegExp.escape(this.value);">
+									</div>
+									<div class="form-group">
+										<input type="password" name="confirmpassword" id="confirmpassword" tabindex="2" class="form-control" placeholder="Confirm Password" required>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-sm-6 col-sm-offset-3">
+												<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
+											</div>
+										</div>
+									</div>
+								</form>
+								<form id="login-form" class="userform"onSubmit="return lvalidate()"action="start.html" method="post" role="form" >
+									<div class="form-group">
+										<input type="text" name="lusername" id="lusername" tabindex="1" class="form-control" placeholder="Username" value="">
+									</div>
+									<div class="form-group">
+										<input type="password" name="lpassword" id="lpassword" tabindex="2" class="form-control" placeholder="Password">
+									</div>
+									<div class="form-group text-center">
+										<input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+										<label for="remember"> Remember Me</label>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-sm-6 col-sm-offset-3">
+												<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-register" value="Log In">
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-lg-12">
+												<div class="text-center">
+													<a href="" tabindex="5" class="forgot-password">Forgot Password?</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--Login/Register Window End-->
+
+	<!--search bar-->
+	<div class="sbox">
+		<form>
+			<h1>FIND YOUR HEALTH SOLUTION <i class="fas fa-stethoscope"></i></h1>
+			<div class="child">
+				<input id="search" type="text" placeholder="Search Locations"/>
+				<select name="options" style="border-radius: 0px;outline:none;">
+					<option>All</option>
+					<option>Hospitals</option>
+					<option>Doctors</option>
+					<option>Clinics</option>
+				</select>
+				<input type="text" placeholder="Search Hospitals,Landmarks,Doctors,...." style="border-radius:0px;outline:none;"/>
+				<button type="button">SEARCH</button>
+			</div>
+		</form>
+	</div>
+	<!--search bar end -->
+
+	<div id="container" class="container-fluid ">
+		<section id="first-fold" class="first-fold" style="background-image:url(https://www.practo.com/consult/bundles/cwipage/images/consult-from-anywhere-v1.svg)">
+		<h1 class="heading"><i class="fas fa-heartbeat"></i> Talk to a doctor from anywhere!</h1>
+		<h2 class="description1">Call + Chat privately with a verified doctor and get response in 5 minutes!</h2>
+		<div class="btn-box"> <a style="text-decoration:none;" href="chat.php" class="btn-blue">Chat now</a> </div>
+	</div>
+
+	<script type="text/javascript">
+		/* Hover animations*/
+		var v1=document.querySelector("button");
+		v1.addEventListener("mouseover",function(){
+			this.style.backgroundColor="steelblue";
+			this.style.color="white";
+		});
+		v1.addEventListener("mouseout",function(){
+			this.style.backgroundColor="buttonFace";
+			this.style.color="#555";
+		});
+
+		lis=document.querySelectorAll("li");
+		for(var i=0;i<lis.length-3;i++){
+			lis[i].addEventListener("mouseover",function(){
+				this.style.backgroundColor="steelblue";
+			});
+			lis[i].addEventListener("mouseout",function(){
+				this.style.backgroundColor="#28328c";
+				this.style.color="#555";
+			});
+		}
+		/* Hover animations end*/
+		/* Validations start*/
+		function lvalidate()
+		{
+			var un = document.getElementById("lusername").value;
+			var pw = document.getElementById("lpassword").value;
+			var sun = "upik98"; 
+			var spw = "12345";
+			if ((un == sun) && (pw == spw)) {
+				alert("Login Success!");           
+				return true;}
+			else {
+				alert ("Login failed :( Please check your username and password!");
+				return false;}
+		}
+		function checkPassword(str)
+		{
+			var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+			return re.test(str);
+		}
+		function checkForm(form)
+		{
+			re = /^\w+$/;
+			if(!re.test(form.username.value)) {
+				alert("Error: Username must contain only letters, numbers and underscores!");
+				form.username.focus();
+				return false;
+			}
+			re=/^[\w]+@[\w]+(.)com$/;
+			if(!re.test(form.email.value)) {
+				alert("Error: Email must contain only numbers,('@','.')-symbols,letters!");
+				form.email.focus();
+				return false;
+			}
+			re=/^[1-9]{1}[0-9]{9}$/;
+			if(!re.test(form.mobile.value)) {
+				alert("Error: Phone number must contain only numbers!");
+				form.mobile.focus();
+				return false;
+			}
+			if(!checkPassword(form.password.value)) {
+				alert("The password you have entered is not valid!");
+				form.password.focus();
+				return false;
+			}
+			if(form.password.value != form.confirmpassword.value) {
+				alert("Error: Please check that you've entered and confirmed your password!");
+				form.confirmpassword.focus();
+				return false;
+			}
+		return true;
+		}
+		/*Validations end */
+		/*Login/Signup window animations*/
+		$(function () {
+			$('#register-form-link').click(function(e) {
+				$("#register-form").delay(100).fadeIn(100);
+				$("#login-form").fadeOut(100);
+				$('#login-form-link').removeClass('active');
+				$(this).addClass('active');
+				e.preventDefault();
+			});
+			$('#login-form-link').click(function(e) {
+				$("#login-form").delay(100).fadeIn(100);
+				$("#register-form").fadeOut(100);
+				$('#register-form-link').removeClass('active');
+				$(this).addClass('active');
+				e.preventDefault();
+			});
+		});
+
+		$("#window1").click(function(){
+			$('#modal-wrapper').css('display','block');
+			$('#register-form').css('display','block');
+			$('#login-form').css('display','none');
+			$("#login-form-link").removeClass("active");
+			$("#register-form-link").addClass("active");
+		});
+		$("#window2").click(function(){
+			$('#modal-wrapper').css('display','block');
+			$('#register-form').css('display','none');
+			$('#login-form').css('display','block');
+			$("#login-form-link").addClass("active");
+			$("#register-form-link").removeClass("active");
+		});
+		$("#closebtn").click(function(){
+			$('#modal-wrapper').fadeOut(600,function(){
+				$('this').css('display','none');
+			})
+		})
+		/*Login/Signup window animations end*/
+	</script>
+</body>
+</html>

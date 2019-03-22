@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+	.sbox{align-items: center;}
+.sbox form .child{border-radius: 8px;background:#28328c;padding: 16px;display: flex; width: auto;margin-left:5%;margin-right:5%;}
+.sbox form .child input{height: 40px;background: #fff;border-radius: 4px;border: 0;display: block;width: 50%;padding: 6px 15px 6px 15px;font-size: 16px;color: #555;font-weight: 400;font-family: 'Poppins', sans-serif;}
+
+.container{text-align:center;font-size:40px;font-weight:bold;color:#2d2d32;}
+.container-fluid{margin-right:auto;margin-left:auto}
+.first-fold{background-color:#28328c;height:540px;color:white;padding-top:50px;background-repeat:no-repeat;background-position:100%;border-radius:8px;}
+.heading{margin-left:146.5px;padding-top:50px;font-size:40px;color:white;margin-bottom:15px;font-weight:bold}
+.description1{margin-left:150px;margin-bottom:31px;font-size:24px;line-height:1.38;color:#f0f0f5;max-width:380px;font-weight:normal}
+.btn-blue{display:inline-block;color:#ffffff;background:#18bef0;border-radius:4px;font-size:26px;font-weight:700;padding:0 33px;line-height:66px;}
+.btn-box{text-align:left;margin-left:230px}
+
+  </style>
+</head>
+<body>
+<div class="navbar_class">
+<nav class="navbar navbar-inverse navbar-fixed">
+  <div class="container-fluid"  style="background-color:#28328c;">
+    <div class="navbar-header">
+      <a class="navbar-brand " href="#" style="color:white;font-size:30px;">WebDoc</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="#" >Home</a></li>
+    </ul>
+	
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="signup.html"  ><span class="glyphicon glyphicon-user "></span> Sign Up</a></li>
+      <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+	<ul class="nav navbar-nav navbar-right">
+		<li><a href=""></a></li>
+		<li><a   href="book_appointment.html">Book Appointment</a></li>
+	    <li><a  href="private_chat.html">Private chat</a></li>
+	    <li class="dropdown collapse navbar-collapse"><a class="dropdown-toggle" data-toggle="dropdown" href="#" data-hover="dropdown"data-animations="fadeInDown 
+										fadeInRight fadeInUp fadeInLeft"><span class="caret"></span></a>
+         <ul class="dropdown-menu">
+           <li><a   href="#">About us</a></li>
+           <li><a  href="#">Help</a></li>
+           <li><a  href="#">Ref</a></li>
+         </ul>
+       </li>
+	</ul>
+  </div>
+</nav>
+</div>
+
+<!-- 
+search bar
+-->
+
+		<div class="sbox" style="padding-top:170px;padding-bottom:170px;">
+	<form>
+        
+          <legend style="text-align:center; ";>FIND YOUR HEALTH SOLUTION</legend>
+        
+        
+          <div class="child">
+            <input id="search" type="text" placeholder="Search Location" style="border-top-right-radius:0px;border-bottom-right-radius:0px;" />
+				
+            
+          
+            <select name="options" style="border-radius: 0px;">
+              <option >All</option>
+			  <option >Hospitals</option>
+              <option>Doctors</option>
+              <option>Clinics</option>
+              
+            </select>
+          
+            <input type="text" placeholder="Search Hospitals,Landmarks,Doctors,...." style="border-radius: 0px"/>
+          
+            <button type="button" style="border:2px;border-top-right-radius:4px;border-bottom-right-radius:4px;">SEARCH</button>
+          </div>
+        
+      </form>
+	  </div>
+	  
+	  
+	  
+	<div id="container" class="container-fluid ">
+        <section id="first-fold" class="first-fold" style="background-image:url(https://www.practo.com/consult/bundles/cwipage/images/consult-from-anywhere-v1.svg)">
+		<h1 class="heading">Talk to a doctor from anywhere!</h1>
+		<h2 class="description1">Call + Chat privately with a verified doctor and get response in 5 minutes!</h2>
+		<div class="btn-box"> <a style="text-decoration:none;" href="chat.php" class="btn-blue">Chat now</a> </div>
+	</div>	  
+
+</body>
+</html>
