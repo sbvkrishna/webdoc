@@ -50,19 +50,6 @@ $("#closebtn").click(function(){
 /*Login/Signup window animations end*/
 
 /* Validations start*/
-function lvalidate()
-{
-    var un = document.getElementById("lusername").value;
-    var pw = document.getElementById("lpassword").value;
-    var sun = "user"; 
-    var spw = "12345";
-    if ((un == sun) && (pw == spw)) {
-        alert("Login Success!");           
-        return true;}
-    else {
-        alert ("Login failed.Please check your username and password!");
-        return false;}
-}
 function checkPassword(str)
 {
     var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
