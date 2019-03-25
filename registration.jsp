@@ -38,12 +38,12 @@ int k=ps1.executeUpdate();
 if(i>0)
 {
     out.print("You are successfully registered...");
-    out.print("<a href="index.html">Login here</a>");
+    out.print("<a href='index.html'>Login here</a>");
     //response.sendRedirect("Login.html");
 }
 if(k>0)
 {
-out.println("vijaya updated");
+out.println("<br>people updated");
 }
 	}
 	catch(Exception er)
